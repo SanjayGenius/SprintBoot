@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd"> -->
+		
+<!DOCTYPE hibernate-configuration SYSTEM  "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+		
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection properties - Driver, URL, user, password -->
+
+		<property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/picdb</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="connection.username">pic</property>
+		<property name="connection.password">picadmin</property>
+		<property name="show_sql">true</property>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="c3p0.min_size">1</property>
+		<property name="c3p0.max_size">100</property>
+		<property name="c3p0.timeout">5</property>
+		<property name="c3p0.max_statements">0</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+	</session-factory>
+</hibernate-configuration>

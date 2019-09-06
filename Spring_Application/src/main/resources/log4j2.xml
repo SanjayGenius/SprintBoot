@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+ <Configuration status="WARN" monitorInterval="30"> 
+    <Properties> 
+        <Property name="LOG_PATTERN"> 
+           %d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${hostName} --- [%15.15t] %-40.40c{1.} : %m%n%ex 
+        </Property> 
+        <Property name="logpath">logs</Property> 
+    </Properties> 
+    <Appenders> 
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true"> 
+            <PatternLayout pattern="${LOG_PATTERN}"/> 
+        </Console> 
+        
+         <RollingFile name="FileAppender" fileName="${sys:logpath}/root.log"  
+            filePattern="${sys:logpath}/root-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	     <RollingFile name="client" fileName="${sys:logpath}/client.log"  
+             filePattern="${sys:logpath}/client-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="checkin" fileName="${sys:logpath}/checkin.log"  
+             filePattern="${sys:logpath}/checkin-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="familyPortal" fileName="${sys:logpath}/familyPortal.log"  
+             filePattern="${sys:logpath}/familyPortal-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="mediaContent" fileName="${sys:logpath}/mediaContent.log"  
+             filePattern="${sys:logpath}/mediaContent-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="menu" fileName="${sys:logpath}/menu.log"  
+             filePattern="${sys:logpath}/menu-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="message" fileName="${sys:logpath}/message.log"  
+             filePattern="${sys:logpath}/message-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="notes" fileName="${sys:logpath}/notes.log"  
+             filePattern="${sys:logpath}/notes-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="weather" fileName="${sys:logpath}/weather.log"  
+             filePattern="${sys:logpath}/weather-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="checkList" fileName="${sys:logpath}/checkList.log"  
+             filePattern="${sys:logpath}/checkList-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile> 
+	    
+	    <RollingFile name="survey" fileName="${sys:logpath}/survey.log"  
+             filePattern="${sys:logpath}/survey-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile>
+	    
+	     <RollingFile name="contact" fileName="${sys:logpath}/contact.log"  
+             filePattern="${sys:logpath}/contact-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile>
+	    
+	    <RollingFile name="event" fileName="${sys:logpath}/event.log"  
+             filePattern="${sys:logpath}/event-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile>
+	    
+	     <RollingFile name="exception" fileName="${sys:logpath}/exception.log"  
+             filePattern="${sys:logpath}/exception-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile>
+	    
+	     <RollingFile name="documentdirectory" fileName="${sys:logpath}/documentdirectory.log"  
+             filePattern="${sys:logpath}/documentdirectory-%d{yyyy-MM-dd}-%i.log"> 
+		    <PatternLayout> 
+		        <Pattern>${LOG_PATTERN}</Pattern> 
+		    </PatternLayout> 
+		    <Policies> 
+		        <SizeBasedTriggeringPolicy size="10MB" /> 
+		    </Policies> 
+		    <DefaultRolloverStrategy max="10"/> 
+	    </RollingFile>
+	     <SMTP name="MailAppender"
+              subject="Log4j2 Demo [PROD]"
+              to="sanjaysingh.b@e2infosystems.com"
+              from="testcatie@gmail.com"
+              smtpHost="smtp.gmail.com"
+              smtpPort="465"
+              smtpUsername="testcatie"
+              smtpPassword="test@catie"
+              bufferSize="1">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+        </SMTP>
+    </Appenders> 
+    
+    <Loggers> 
+		<Logger name="ClientServices" level="debug" additivity="false"> 
+            <AppenderRef ref="client" /> 
+        </Logger> 
+        
+        <Logger name="CheckinServices" level="debug" additivity="false"> 
+            <AppenderRef ref="checkin" /> 
+        </Logger>
+        
+        <Logger name="ContactServices" level="debug" additivity="false"> 
+            <AppenderRef ref="contact" /> 
+        </Logger> 
+        
+        <Logger name="FamilyPortalServices" level="debug" additivity="false"> 
+            <AppenderRef ref="familyPortal" /> 
+        </Logger>  
+        
+        <Logger name="MediaContentServices" level="debug" additivity="false"> 
+            <AppenderRef ref="mediaContent" /> 
+        </Logger> 
+        
+        <Logger name="MenuServices" level="debug" additivity="false"> 
+            <AppenderRef ref="menu" /> 
+        </Logger> 
+        
+        <Logger name="MessageServices" level="debug" additivity="false"> 
+            <AppenderRef ref="message" /> 
+        </Logger> 
+        
+        <Logger name="NotesServices" level="debug" additivity="false"> 
+            <AppenderRef ref="notes" /> 
+        </Logger> 
+        
+        <Logger name="WeatherServices" level="debug" additivity="false"> 
+            <AppenderRef ref="weather" /> 
+        </Logger>
+        
+        <Logger name="ChecklistServices" level="debug" additivity="false"> 
+            <AppenderRef ref="checkList" /> 
+        </Logger>  
+        
+        <Logger name="SurveyServices" level="debug" additivity="false"> 
+            <AppenderRef ref="survey" /> 
+        </Logger> 
+        
+        <Logger name="EventServices" level="debug" additivity="false"> 
+            <AppenderRef ref="event" /> 
+        </Logger> 
+        
+        <Logger name="Exception" level="debug" additivity="false"> 
+            <AppenderRef ref="exception" /> 
+        </Logger> 
+        
+        <Logger name="DocumentServices" level="debug" additivity="false"> 
+            <AppenderRef ref="documentdirectory" /> 
+        </Logger> 
+        
+        <Logger name="WeatherServices" level="debug" additivity="false"> 
+            <AppenderRef ref="weather" /> 
+        </Logger>
+        
+        <Root level="info"> 
+            <AppenderRef ref="ConsoleAppender" /> 
+             <AppenderRef ref="FileAppender" /> 
+        </Root> 
+    </Loggers> 
+</Configuration> 
